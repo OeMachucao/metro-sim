@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  
+  /* Paleta InfoVis */
+  --bg-base: #ebe2d2; /* paper */
+  --bg-surface: #f4ece0; /* cream */
+  --bg-surface-alt: rgba(244, 236, 224, 0.85);
+  --text-primary: #1a1a1a; /* ink */
+  --text-secondary: rgba(26, 26, 26, 0.6);
+  --border-color: rgba(26, 26, 26, 0.2);
+  --accent: #c8442a; /* brick */
+  
+  /* Colores Oficiales Metro de Santiago */
+  --metro-l1: #E42228; /* Línea 1 - Rojo */
+  --metro-l2: #FFD200; /* Línea 2 - Amarillo */
+  --metro-l3: #8C543A; /* Línea 3 - Café */
+  --metro-l4: #002365; /* Línea 4 - Azul */
+  --metro-l4a: #0087CE;/* Línea 4A - Celeste */
+  --metro-l5: #00934F; /* Línea 5 - Verde */
+  --metro-l6: #A276B4; /* Línea 6 - Morado */
+  
+  /* Variables de Layout (espaciados uniformes) */
+  --header-height: 64px;
+  --gap-size: 1.5rem;
+  --padding-size: 1.5rem;
+  --border-radius: 12px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Remove dark mode override to keep the light friendly theme consistent */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;           /* Altura fija al 100% de la ventana */
+    overflow: hidden;        /* Previene cualquier scroll nativo (vertical u horizontal) */
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+}
